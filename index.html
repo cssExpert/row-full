@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Creating full width (100% ) container inside fixed width container.</title>
+</head>
+
+<body>
+<h1 itemprop="headline">Creating full width (100% ) container inside fixed width container.</h1>
+<div itemprop="articleBody">
+    <p>Some times we need to add a full width containers (which spans 100%  of window) inside a container which has a fixed width and aligned  center.</p>
+    <p>Following code helps to achieve the layout.</p>
+    <p>HTML</p>
+    <pre> &lt;div class="container" style="width: 750px; margin: 0 auto;"&gt;  &lt;div class="row-full"&gt;      --- Full width container --- &lt;/div&gt;  &lt;/div&gt;</pre>
+    <p>CSS </p>
+    <pre> .row-full{  width: 100vw;  position: relative;  margin-left: -50vw;  height: 100px;  margin-top: 100px;  left: 50%; }</pre>
+    <p>How it works:</p>
+    <p>Css units vw (viewport width) is used here. IE9 above has support for vw &amp; vh css units.</p>
+</div>
+</body>
+</html>
